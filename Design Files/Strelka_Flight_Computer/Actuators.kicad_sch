@@ -1,0 +1,19 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid bbeeb1d1-1cfd-422f-b9b5-c3cc2b06e0e2)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (text "Servo outputs" (at 194.31 44.45 0)
+    (effects (font (size 2.54 2.54)) (justify left bottom))
+    (uuid 3ab1c98c-9017-47bc-9a8e-127920aff19e)
+  )
+  (text "3x E-match actuators" (at 45.72 45.085 0)
+    (effects (font (size 2.54 2.54)) (justify left bottom))
+    (uuid 70357545-9ba6-40b9-8936-9fac959befe6)
+  )
+)
