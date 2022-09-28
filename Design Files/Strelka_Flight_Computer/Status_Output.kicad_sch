@@ -1,0 +1,19 @@
+(kicad_sch (version 20211123) (generator eeschema)
+
+  (uuid a0ab9dd3-cae6-4af6-9ba7-b8bb79596d3f)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (text "LED" (at 174.625 41.91 0)
+    (effects (font (size 2.54 2.54)) (justify left bottom))
+    (uuid 2807abd4-57a2-4595-80ef-59d43bba75c3)
+  )
+  (text "Buzzer" (at 67.945 41.275 0)
+    (effects (font (size 2.54 2.54)) (justify left bottom))
+    (uuid 2d186a92-4708-4a7c-addd-b021a8baacfd)
+  )
+)

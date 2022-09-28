@@ -348,6 +348,14 @@
     [
       "cac0266b-b0a3-42c5-a26b-4963fb2fde0a",
       "Continuity_Testing"
+    ],
+    [
+      "e94c6cea-6c6c-4b5f-a840-b97a15d9406a",
+      "Data_Logging"
+    ],
+    [
+      "b349d17f-16af-45b5-b34b-b6e3104521b0",
+      "Status_Output"
     ]
   ],
   "text_variables": {}
