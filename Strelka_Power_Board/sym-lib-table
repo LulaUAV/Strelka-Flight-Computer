@@ -1,0 +1,12 @@
+(sym_lib_table
+  (lib (name "2021-10-06_12-15-56")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/2021-10-06_12-15-56.kicad_sym")(options "")(descr ""))
+  (lib (name "ADXL375BCCZ-RL7")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/ADXL375BCCZ-RL7.kicad_sym")(options "")(descr ""))
+  (lib (name "BMX055")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/BMX055.kicad_sym")(options "")(descr ""))
+  (lib (name "FP6276BXR-G1")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/FP6276BXR-G1.kicad_sym")(options "")(descr ""))
+  (lib (name "MS621FE-FL11E")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/MS621FE-FL11E.kicad_sym")(options "")(descr ""))
+  (lib (name "MS561101BA03-50")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/MS561101BA03-50.kicad_sym")(options "")(descr ""))
+  (lib (name "New_Library")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/New_Library.kicad_sym")(options "")(descr ""))
+  (lib (name "UART_Switch")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/UART_Switch.kicad_sym")(options "")(descr ""))
+  (lib (name "SM08B-GHS-TB_LF__SN_")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/SM08B-GHS-TB_LF__SN_.kicad_sym")(options "")(descr ""))
+  (lib (name "SM06B-GHS-TB_LF__SN_")(type "KiCad")(uri "C:/Users/thean/OneDrive/Documents/1. Uni Work/HPR/Strelka-Flight-Computer/Local Library/SM06B-GHS-TB_LF__SN_.kicad_sym")(options "")(descr ""))
+)

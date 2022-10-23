@@ -239,7 +239,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Strelka_Flight_Computer.kicad_pro",
+    "filename": "Strelka_Power_Board.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -318,56 +318,8 @@
   },
   "sheets": [
     [
-      "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+      "83158c8b-22ee-48c3-a78a-e95d14e6b912",
       ""
-    ],
-    [
-      "0daddb18-1491-4767-9ffd-66c8a8ce3cbd",
-      "Power"
-    ],
-    [
-      "72745e37-6398-4523-a0b8-fcae44c9df22",
-      "915MHz_Radio"
-    ],
-    [
-      "7e469a82-52a7-4eb1-be03-bc9c0642b27e",
-      "STM32F405"
-    ],
-    [
-      "35cf6da3-4352-42df-b1af-73b09ff2e1d9",
-      "Actuators"
-    ],
-    [
-      "f1926e02-3170-4727-853e-1c4f3bbf137d",
-      "Data_Interfaces"
-    ],
-    [
-      "78f71895-bddb-4f64-a608-99074f2d1c44",
-      "Sensors"
-    ],
-    [
-      "cac0266b-b0a3-42c5-a26b-4963fb2fde0a",
-      "Continuity_Testing"
-    ],
-    [
-      "e94c6cea-6c6c-4b5f-a840-b97a15d9406a",
-      "Data_Logging"
-    ],
-    [
-      "b349d17f-16af-45b5-b34b-b6e3104521b0",
-      "Status_Output"
-    ],
-    [
-      "256d0f41-abcb-432e-a4cc-bcef1aa15bc3",
-      "BMX055"
-    ],
-    [
-      "9f95701d-2876-4223-990f-d706d5845c81",
-      "MS561101BA03-50"
-    ],
-    [
-      "0532b2e1-7d82-4dde-adb4-cddab7b4074c",
-      "L80-M39"
     ]
   ],
   "text_variables": {}
