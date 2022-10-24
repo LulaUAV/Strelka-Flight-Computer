@@ -990,7 +990,7 @@
     (uuid edc51600-a739-4f6f-8d7b-a5cc6f16182b)
   )
 
-  (hierarchical_label "RXD2_GPS" (shape input) (at 85.725 91.44 180)
+  (hierarchical_label "RXD2_GPS" (shape input) (at 85.725 87.63 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 24a7d88f-3f56-4743-a717-a73019e713ce)
   )
@@ -1002,7 +1002,7 @@
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 6f1c8e90-32b3-45a8-a254-bd49fa92f38b)
   )
-  (hierarchical_label "TXD2_GPS" (shape input) (at 85.725 87.63 180)
+  (hierarchical_label "TXD2_GPS" (shape input) (at 85.725 91.44 180)
     (effects (font (size 1.27 1.27)) (justify right))
     (uuid 763bdcfd-e1de-4448-9887-c7a152a72cf6)
   )
