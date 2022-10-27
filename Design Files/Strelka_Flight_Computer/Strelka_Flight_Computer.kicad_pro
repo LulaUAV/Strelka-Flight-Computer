@@ -225,7 +225,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "ignore",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "unannotated": "error",
@@ -334,20 +334,20 @@
       "STM32F405"
     ],
     [
-      "35cf6da3-4352-42df-b1af-73b09ff2e1d9",
-      "Actuators"
+      "620b228e-0ce7-49ae-8a03-f7e6e9d55d47",
+      "Ematch_Drogue1"
     ],
     [
       "f1926e02-3170-4727-853e-1c4f3bbf137d",
       "Data_Interfaces"
     ],
     [
-      "78f71895-bddb-4f64-a608-99074f2d1c44",
-      "Sensors"
+      "35cf6da3-4352-42df-b1af-73b09ff2e1d9",
+      "Actuators"
     ],
     [
-      "cac0266b-b0a3-42c5-a26b-4963fb2fde0a",
-      "Continuity_Testing"
+      "78f71895-bddb-4f64-a608-99074f2d1c44",
+      "Sensors"
     ],
     [
       "e94c6cea-6c6c-4b5f-a840-b97a15d9406a",

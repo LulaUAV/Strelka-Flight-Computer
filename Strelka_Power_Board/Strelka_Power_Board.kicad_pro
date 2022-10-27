@@ -320,6 +320,30 @@
     [
       "83158c8b-22ee-48c3-a78a-e95d14e6b912",
       ""
+    ],
+    [
+      "c67b9a12-94b9-4db5-bff0-c11107e6dfb8",
+      "Regulator"
+    ],
+    [
+      "f549e0e5-100b-4a91-882c-6029c01abfd2",
+      "Power"
+    ],
+    [
+      "9602b90b-be40-44d8-8784-4daec28912a1",
+      "STM32F405"
+    ],
+    [
+      "78c339a9-1b2e-4e73-a319-d39db946b9b1",
+      "Actuators"
+    ],
+    [
+      "476d5c1c-9cc4-4e76-ac40-009007f5b1ca",
+      "Data_Interfaces"
+    ],
+    [
+      "5a7bab0a-c419-4c7e-a220-2ab1a7648679",
+      "Motor_Driver1"
     ]
   ],
   "text_variables": {}

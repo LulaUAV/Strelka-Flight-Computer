@@ -8,6 +8,8 @@
   )
 
 
+  (no_connect (at 211.455 125.73) (uuid dbf780b0-99a4-4f71-8587-0d745fba641e))
+
   (wire (pts (xy 95.25 113.03) (xy 103.505 113.03))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 14366252-cca5-45d8-8e3e-eb1fe60eea0a)
