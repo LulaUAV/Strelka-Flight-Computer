@@ -89,6 +89,8 @@ void Error_Handler(void);
 #define GYRO_CS_GPIO_Port GPIOA
 #define DROGUE_L_Pin GPIO_PIN_6
 #define DROGUE_L_GPIO_Port GPIOB
+#define GPS_PPS_Pin GPIO_PIN_7
+#define GPS_PPS_GPIO_Port GPIOB
 #define BARO_CS_Pin GPIO_PIN_8
 #define BARO_CS_GPIO_Port GPIOB
 #define ACCEL_CS_Pin GPIO_PIN_9

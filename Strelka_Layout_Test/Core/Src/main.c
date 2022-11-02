@@ -558,9 +558,9 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : ACCEL_INT_Pin GYRO_INT_Pin MAG_INT_Pin SD_DET_Pin */
-  GPIO_InitStruct.Pin = ACCEL_INT_Pin|GYRO_INT_Pin|MAG_INT_Pin|SD_DET_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  /*Configure GPIO pins : ACCEL_INT_Pin GYRO_INT_Pin MAG_INT_Pin */
+  GPIO_InitStruct.Pin = ACCEL_INT_Pin|GYRO_INT_Pin|MAG_INT_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
@@ -571,11 +571,23 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : IO_RF_Pin */
-  GPIO_InitStruct.Pin = IO_RF_Pin;
+  /*Configure GPIO pin : SD_DET_Pin */
+  GPIO_InitStruct.Pin = SD_DET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(SD_DET_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : IO_RF_Pin */
+  GPIO_InitStruct.Pin = IO_RF_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(IO_RF_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : GPS_PPS_Pin */
+  GPIO_InitStruct.Pin = GPS_PPS_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(GPS_PPS_GPIO_Port, &GPIO_InitStruct);
 
 }
 
