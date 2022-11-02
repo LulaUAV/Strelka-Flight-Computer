@@ -1,0 +1,34 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# TPS61085DGKR
+#
+DEF TPS61085DGKR U 0 40 Y Y 1 L N
+F0 "U" -500 539 50 H V L BNN
+F1 "TPS61085DGKR" -500 -657 50 H V L BNN
+F2 "SOP65P490X110-8N" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "TPS61085DGKR" 0 0 50 H I L BNN "MP"
+F5 "https://snapeda.com/shop?store=Texas+Instruments&id=1236975" 0 0 50 H I L BNN "TEXAS_INSTRUMENTS-PURCHASE-URL"
+F6 "VSSOP-8 Texas Instruments" 0 0 50 H I L BNN "PACKAGE"
+F7 "18.5V, 2A, 650kHz / 1.2MHz Step-Up DC-DC Converter w/ Forced PWM Mode 8-VSSOP -40 to 85" 0 0 50 H I L BNN "DESCRIPTION"
+F8 "https://snapeda.com/shop?store=Mouser&id=1236975" 0 0 50 H I L BNN "MOUSER-PURCHASE-URL"
+F9 "Texas Instruments" 0 0 50 H I L BNN "MF"
+F10 "Unavailable" 0 0 50 H I L BNN "AVAILABILITY"
+F11 "None" 0 0 50 H I L BNN "PRICE"
+DRAW
+S -500 -500 500 500 0 0 16 f
+X EN 3 -700 400 200 R 40 40 0 0 I 
+X FB 2 700 100 200 L 40 40 0 0 I 
+X FREQ 7 -700 0 200 R 40 40 0 0 I 
+X IN 6 -700 300 200 R 40 40 0 0 I 
+X SW 5 700 -100 200 L 40 40 0 0 I 
+X COMP 1 -700 -200 200 R 40 40 0 0 B 
+X SS 8 700 300 200 L 40 40 0 0 O 
+X PGND 4 700 -400 200 L 40 40 0 0 W 
+ENDDRAW
+ENDDEF
+#
+# End Library

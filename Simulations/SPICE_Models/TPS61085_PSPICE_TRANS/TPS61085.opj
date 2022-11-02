@@ -1,0 +1,163 @@
+(ExpressProject "TPS61085"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File "tps61085.olb"
+        (Type "Schematic Library")))
+    (NoModify)
+    (File "tps61085.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (RootChangedForceReNetlist "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs")
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\tps61085-pspicefiles\startup\tran.sim"
+        (DisplayName "Startup-tran")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\tps61085-pspicefiles\startup\tran.sim"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\tps61085.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName ".\tps61085.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (TPS61085
+      (FullPartName "TPS61085.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS61085\ACTIVE_WORK\PSPICE\TPS61085_PSPICE_TRANS\TPS61085.OLB")
+      (DeviceIndex "0"))
+    (TPS61087
+      (FullPartName "TPS61087.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS61087\ACTIVE_WORK\PSPICE\TPS61087_PSPICE_TRANS\TPS61087.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (S
+      (FullPartName "S.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (IPULSE
+      (FullPartName "IPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (ES1A
+      (FullPartName "ES1A.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS61087\ACTIVE_WORK\PSPICE\TPS61087_PSPICE_TRANS\TPS61087.OLB")
+      (DeviceIndex "0"))
+    (SL22
+      (FullPartName "SL22.Normal")
+      (LibraryName
+         "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\PART_NUMBERS\TPS61087\ACTIVE_WORK\PSPICE\TPS61087_PSPICE_TRANS\TPS61087.OLB")
+      (DeviceIndex "0"))
+    (INV_DELAY_BASIC_GEN
+      (FullPartName "INV_DELAY_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0101_LOGIC\GATES_GEN.OLB")
+      (DeviceIndex "0"))
+    (AND2_BASIC_GEN
+      (FullPartName "AND2_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0101_LOGIC\GATES_GEN.OLB")
+      (DeviceIndex "0"))
+    (INV_BASIC_GEN
+      (FullPartName "INV_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0101_LOGIC\GATES_GEN.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (COMP_BASIC_GEN
+      (FullPartName "COMP_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0102_COMPARATORS\COMPARATOR_GEN.OLB")
+      (DeviceIndex "0"))
+    (ABM1
+      (FullPartName "ABM1.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ABM.OLB")
+      (DeviceIndex "0"))
+    (ABM
+      (FullPartName "ABM.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ABM.OLB")
+      (DeviceIndex "0"))
+    (D_D1
+      (FullPartName "D_D1.Normal")
+      (LibraryName
+         "D:\PSPICE\TPS40192\20080331 PRE-PACKAGED DEBUGGED\LIBRARY\TPS40192APP.OLB")
+      (DeviceIndex "0"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (PORTBOTH-R
+      (LibraryName "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (GAIN
+      (FullPartName "GAIN.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ABM.OLB")
+      (DeviceIndex "0"))
+    (VSIN
+      (FullPartName "VSIN.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (OR2_BASIC_GEN
+      (FullPartName "OR2_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0101_LOGIC\GATES_GEN.OLB")
+      (DeviceIndex "0"))
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (G
+      (FullPartName "G.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (VPULSE
+      (FullPartName "VPULSE.Normal")
+      (LibraryName
+         "C:\CADENCE\SPB_16.0\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0"))
+    (DC_1mV_1mA_1V_1nA
+      (FullPartName "DC_1mV_1mA_1V_1nA.Normal")
+      (LibraryName
+         "C:\DOCUMENTS AND SETTINGS\SIMULATOR\MY DOCUMENTS\CUSTOMERS\AEI\TPS40007\TPS40007_TRAN_111907\I2DPARTS.OLB")
+      (DeviceIndex "0"))
+    (AND3_BASIC_GEN
+      (FullPartName "AND3_BASIC_GEN.Normal")
+      (LibraryName
+         "C:\PSPICE_SUBBLK_LIB_WS\PSPICE_SUBBLK_LIB_DS\PSPICE_SUBBLK_LIB\SB02_SUBBLOCKBASIC\SB0101_LOGIC\GATES_GEN.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory
+     "C:\ELAB_MODEL_WS\ELAB_MODEL_DS\Part_Numbers\TPS61085\Active_Work\PSPICE\TPS61085_PSPICE_TRANS")
+  (MPSSessionName "a0866893")
+  (GlobalState
+    (FileView
+      (Path "Outputs"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -4 -23 0 392 0 569"))
+      (Tab 0))))

@@ -1364,7 +1364,7 @@
     (property "Value" "MS621FE-FL11E" (id 1) (at 202.565 80.645 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "BAT_MS621FE-FL11E" (id 2) (at 204.47 78.74 0)
+    (property "Footprint" "Footprints:BAT_MS621FE-FL11E" (id 2) (at 204.47 78.74 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
     (property "Datasheet" "http://www.sii.co.jp/en/me/datasheets/ms-rechargeable/ms621fe/" (id 3) (at 200.66 80.01 0)
