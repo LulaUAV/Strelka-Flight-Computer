@@ -2,5 +2,9 @@
     "cSpell.words": [
         "ematch",
         "GPIO"
-    ]
+    ],
+    "files.associations": {
+        "ematch_actuators.h": "c",
+        "stm32f4xx_hal_gpio.h": "c"
+    }
 }

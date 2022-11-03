@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "stm32f4xx_hal_adc.h": "c",
+        "cmsis_os.h": "c",
+        "stm32f4xx_hal_gpio.h": "c",
+        "stm32f4xx_hal_gpio_ex.h": "c",
+        "stm32f4xx_hal_def.h": "c",
+        "stm32f4xx.h": "c"
+    }
+}
