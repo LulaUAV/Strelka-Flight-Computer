@@ -1,0 +1,2 @@
+../Core/Src/data_logging.c:18:6:log_to_file	32	static
+../Core/Src/data_logging.c:41:6:data_logging_init	24	static

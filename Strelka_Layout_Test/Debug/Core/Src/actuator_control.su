@@ -1,0 +1,3 @@
+../Core/Src/actuator_control.c:15:6:actuator_control_init	16	static
+../Core/Src/actuator_control.c:30:31:set_servo_positions	56	static
+../Core/Src/actuator_control.c:55:9:calculate_crc32	32	static

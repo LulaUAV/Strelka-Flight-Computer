@@ -1,0 +1,5 @@
+../Core/Src/Ematch_actuators.c:15:6:ematch_actuators_init	16	static
+../Core/Src/Ematch_actuators.c:26:6:fire_main_ematch	16	static
+../Core/Src/Ematch_actuators.c:42:6:fire_drogue_ematch	16	static
+../Core/Src/Ematch_actuators.c:58:10:test_drogue_continuity	24	static
+../Core/Src/Ematch_actuators.c:83:10:test_main_continuity	24	static

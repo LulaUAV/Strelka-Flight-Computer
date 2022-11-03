@@ -18,9 +18,7 @@
 
 /* STM32 specific libraries */
 #include "stm32f405xx.h"
-#include "stm32f4xx_hal_gpio.h"
-#include "stm32f4xx_hal_adc.h"
-#include "cmsis_os.h"
+#include "stm32f4xx_hal.h"
 
 /* Struct definition */
 typedef struct {
@@ -51,6 +49,7 @@ typedef struct {
 
 
 /* Function prototypes */
+void ematch_actuators_init(ematch_pins* ematch_pins);
 void fire_main_ematch(ematch_pins* ematch_pins);
 void fire_drogue_ematch(ematch_pins* ematch_pins);
 uint16_t test_drogue_continuity(ematch_pins* ematch_pins);

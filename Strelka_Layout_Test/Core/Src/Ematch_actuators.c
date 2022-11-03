@@ -12,7 +12,7 @@
   * @param  ematch_pins* ematch_pins is a struct containting pin configurations.
   * @retval None
   */
-void init(ematch_pins* ematch_pins) {
+void ematch_actuators_init(ematch_pins* ematch_pins) {
   // Calibrate ADC on start up
   HAL_ADCEx_Calibration_Start(ematch_pins->main_continuity_ADC);
   HAL_ADCEx_Calibration_Start(ematch_pins->drogue_continuity_ADC);

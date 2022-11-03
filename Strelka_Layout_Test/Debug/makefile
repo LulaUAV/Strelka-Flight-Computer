@@ -11,6 +11,10 @@ RM := rm -rf
 -include sources.mk
 -include USB_DEVICE/Target/subdir.mk
 -include USB_DEVICE/App/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/subdir.mk
+-include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
 -include Middlewares/Third_Party/FatFs/src/option/subdir.mk
 -include Middlewares/Third_Party/FatFs/src/subdir.mk
 -include Middlewares/ST/STM32_USB_Device_Library/Core/Src/subdir.mk
@@ -68,8 +72,8 @@ all: main-build
 main-build: Strelka_Layout_Test.elf secondary-outputs
 
 # Tool invocations
-Strelka_Layout_Test.elf Strelka_Layout_Test.map: $(OBJS) $(USER_OBJS) C:\Users\thean\OneDrive\Documents\1.\ Uni\ Work\HPR\Strelka-Flight-Computer\Strelka_Layout_Test\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Strelka_Layout_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\thean\OneDrive\Documents\1. Uni Work\HPR\Strelka-Flight-Computer\Strelka_Layout_Test\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Strelka_Layout_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Strelka_Layout_Test.elf Strelka_Layout_Test.map: $(OBJS) $(USER_OBJS) C:\Users\thean\Documents\FYP\Strelka-Flight-Computer\Strelka_Layout_Test\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Strelka_Layout_Test.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\thean\Documents\FYP\Strelka-Flight-Computer\Strelka_Layout_Test\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Strelka_Layout_Test.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

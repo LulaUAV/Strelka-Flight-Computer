@@ -5,6 +5,10 @@
         "stm32f4xx_hal_gpio.h": "c",
         "stm32f4xx_hal_gpio_ex.h": "c",
         "stm32f4xx_hal_def.h": "c",
-        "stm32f4xx.h": "c"
+        "stm32f4xx.h": "c",
+        "stm32f405xx.h": "c",
+        "stm32f4xx_hal_spi.h": "c",
+        "stm32f4xx_hal_sd.h": "c",
+        "stm32f4xx_hal_crc.h": "c"
     }
 }
