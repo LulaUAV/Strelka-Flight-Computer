@@ -165,7 +165,6 @@
 		<project id="SPI_Comms_Test_CM7.null.131381524" name="SPI_Comms_Test_CM7"/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1240955526;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1240955526.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1662770328;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1560612017">
@@ -176,4 +175,16 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="STM32H745_CM7" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments>-j8</buildArguments>
+				<buildTarget>STM32H745_CM7</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
 </cproject>

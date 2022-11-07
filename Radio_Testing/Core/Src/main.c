@@ -22,7 +22,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "LoRa.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,7 +49,10 @@ UART_HandleTypeDef huart2;
 DMA_HandleTypeDef hdma_usart1_rx;
 
 /* USER CODE BEGIN PV */
-
+UART_HandleTypeDef* USB_UART = &huart1;
+SPI_HandleTypeDef* RF_SPI = &hspi1;
+MAX_RF_PACKET_SIZE = 256;
+uint8_t RF_RX_Buff[MAX_RF_PACKET_SIZE];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -66,6 +69,23 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+LoRa LoRaClass;
+uint8_t RF_available_bytes = 0;
+
+void Blocking_LED_Blink(uint8_t freq) {
+	while(1) {
+		HAL_GPIO_WritePin(INDICATOR_LED_GPIO_Port, INDICATOR_LED_Pin, GPIO_PIN_SET);
+		HAL_Delay(1000/freq);
+		HAL_GPIO_WritePin(INDICATOR_LED_GPIO_Port, INDICATOR_LED_Pin, GPIO_PIN_RESET);
+		HAL_Delay(1000/freq);
+	}
+}
+
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
+	if(GPIO_Pin == LoRaClass.DIO0_pin){
+		RF_available_bytes = LoRa_received_bytes(&LoRaClass);
+	}
+}
 
 /* USER CODE END 0 */
 
@@ -76,7 +96,7 @@ static void MX_TIM2_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
-
+  RetargetInit(USB_UART);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -105,6 +125,39 @@ int main(void)
   MX_USB_DEVICE_Init();
   /* USER CODE BEGIN 2 */
 
+  // LoRa Class definitions
+  LoRaClass = newLoRa();
+  LoRaClass.hSPIx                 = RF_SPI;
+  LoRaClass.CS_port               = RF_SPI_NSS_GPIO_Port;
+  LoRaClass.CS_pin                = RF_SPI_NSS_Pin;
+  LoRaClass.reset_port            = RESET_RF_GPIO_Port;
+  LoRaClass.reset_pin             = RESET_RF_Pin;
+  LoRaClass.DIO0_port			  = IO0_RF_GPIO_Port;
+  LoRaClass.DIO0_pin			  = IO0_RF_Pin;
+
+  LoRaClass.frequency             = 915;
+  LoRaClass.spredingFactor        = SF_7;						// default = SF_7
+  LoRaClass.bandWidth			  = BW_125KHz;				  	// default = BW_125KHz
+  LoRaClass.crcRate				  = CR_4_5;						// default = CR_4_5
+  LoRaClass.power			      = POWER_20db;					// default = 20db
+  LoRaClass.overCurrentProtection = 120; 						// default = 100 mA
+  LoRaClass.preamble			  = 10;		  					// default = 8;
+  LoRaClass.preamble			  = LORA_MODULATION;
+
+  HAL_GPIO_WritePin(RF_SPI_NSS_GPIO_Port, RF_SPI_NSS_Pin, GPIO_PIN_SET);
+
+  LoRa_reset(&LoRaClass);
+  uint32_t result = LoRa_init(&LoRaClass);
+
+  if(result == LORA_NOT_FOUND) {
+	  Blocking_LED_Blink(1);
+  }
+  else if(result == LORA_UNAVAILABLE) {
+	  Blocking_LED_Blink(1);
+  }
+  // START CONTINUOUS RECEIVING -----------------------------------
+  LoRa_startReceiving(&LoRaClass);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,6 +166,10 @@ int main(void)
   {
     /* USER CODE END WHILE */
 
+	if(RF_available_bytes) {
+		// Read from RF buffer
+		LoRa_receive(&LoRaClass, RF_RX_Buff, RF_available_bytes);
+	}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

@@ -40,7 +40,7 @@
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
-
+#define packet_size 21
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -172,14 +172,15 @@ Error_Handler();
 	  if(HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13)) {
 		  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
 		  // Send command over SPI
-		  uint8_t data_packet[9];
+		  uint8_t data_packet[packet_size];
 		  data_packet[0] = 0x44;
-		  data_packet[1] = 128;
-		  data_packet[2] = 64;
-		  data_packet[3] = 32;
-		  data_packet[4] = 250;
+		  uint32_t servo_byte = 1000;
+		  for (int i=0; i<4; i++) {
+			  memcpy(&data_packet[i*4 + 1], &servo_byte, sizeof(servo_byte));
+			  servo_byte += 1000;
+		  }
 		  uint32_t CRC_Calc = ~HAL_CRC_Calculate(&hcrc,(uint32_t *) data_packet, sizeof(data_packet)-4);
-		  memcpy(&data_packet[5], &CRC_Calc, sizeof(uint32_t));
+		  memcpy(&data_packet[sizeof(data_packet)-4], &CRC_Calc, sizeof(uint32_t));
 
 		  HAL_SPI_Transmit(&hspi3, (uint8_t*)data_packet, sizeof(data_packet), HAL_MAX_DELAY);
 		  HAL_UART_Transmit(&huart3, "Sent data\r\n", sizeof("Sent data\r\n"), HAL_MAX_DELAY);

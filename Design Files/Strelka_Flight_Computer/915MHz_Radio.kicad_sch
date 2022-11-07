@@ -543,7 +543,7 @@
     (property "Value" "Antenna_Shield" (id 1) (at 169.9261 85.1786 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount" (id 2) (at 166.37 80.645 0)
+    (property "Footprint" "Connector_Coaxial:SMA_Amphenol_132134_Vertical" (id 2) (at 166.37 80.645 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 166.37 80.645 0)

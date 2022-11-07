@@ -1615,7 +1615,7 @@
   (symbol (lib_id "UART_Switch:UART_Switch") (at 201.93 100.965 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a8ae94a3-0356-478e-bd1e-7ba508733e3f)
-    (property "Reference" "JP?" (id 0) (at 201.93 92.71 0))
+    (property "Reference" "JP2" (id 0) (at 201.93 92.71 0))
     (property "Value" "UART_Switch" (id 1) (at 201.93 95.25 0))
     (property "Footprint" "Footprints:UART_Switch" (id 2) (at 201.93 100.965 0)
       (effects (font (size 1.27 1.27)) hide)

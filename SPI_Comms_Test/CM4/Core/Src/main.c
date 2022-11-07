@@ -72,7 +72,7 @@ SPI_HandleTypeDef hspi2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-#define BUFFER_SIZE 9
+#define BUFFER_SIZE 21
 uint8_t RX_Buffer[BUFFER_SIZE];
 uint8_t SPI_ready = 0;
 /* USER CODE END PV */
@@ -85,7 +85,14 @@ static void MX_SPI2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+typedef struct {
+	uint32_t servo_1_pos;
+	uint32_t servo_2_pos;
+	uint32_t servo_3_pos;
+	uint32_t servo_4_pos;
+}Servos_handle;
 
+Servos_handle servos;
 /* USER CODE END 0 */
 
 /**
@@ -158,8 +165,13 @@ int main(void)
 		  if(CRC_Calc == CRC_Rec){
 			  uint8_t header = RX_Buffer[0];
 			  if(header == 0x44) {
-				  char printString[256];
-				  size_t sz = snprintf(printString, sizeof(printString), "Servo Command Received: %d, %d, %d, %d\r\n", RX_Buffer[1], RX_Buffer[2], RX_Buffer[3], RX_Buffer[4]);
+				  memcpy(&servos.servo_1_pos, &RX_Buffer[1], sizeof(servos.servo_1_pos));
+				  memcpy(&servos.servo_2_pos, &RX_Buffer[5], sizeof(servos.servo_1_pos));
+				  memcpy(&servos.servo_3_pos, &RX_Buffer[9], sizeof(servos.servo_1_pos));
+				  memcpy(&servos.servo_4_pos, &RX_Buffer[13], sizeof(servos.servo_1_pos));
+
+				  char printString[64];
+				  size_t sz = snprintf(printString, sizeof(printString), "Servo Command Received: %d, %d, %d, %d\r\n", servos.servo_1_pos, servos.servo_2_pos, servos.servo_3_pos, servos.servo_4_pos);
 				  HAL_UART_Transmit(&huart3, (uint8_t*)printString, sz, HAL_MAX_DELAY);
 			  }
 			  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);

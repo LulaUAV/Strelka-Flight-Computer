@@ -1260,6 +1260,12 @@
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/b09b2a9d-a0e5-4b0c-9d53-5e89e91b855d"
       (reference "#PWR0109") (unit 1) (value "+5VA") (footprint "")
     )
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/9a07a993-5e55-4e93-aeb2-220e3709126e"
+      (reference "#PWR0110") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/f6bbf021-792b-4238-a079-3ac51234fc81"
+      (reference "#PWR0111") (unit 1) (value "GND") (footprint "")
+    )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/52eb8424-8323-451c-a723-5be04f92ea20"
       (reference "#PWR0113") (unit 1) (value "+5V") (footprint "")
     )
@@ -1558,13 +1564,25 @@
       (reference "#PWR0226") (unit 1) (value "+3.3V") (footprint "")
     )
     (path "/72745e37-6398-4523-a0b8-fcae44c9df22/709181ea-3857-4eb3-98e0-b5947b89e6fb"
-      (reference "AE1") (unit 1) (value "Antenna_Shield") (footprint "Connector_Coaxial:SMA_Amphenol_132289_EdgeMount")
+      (reference "AE1") (unit 1) (value "Antenna_Shield") (footprint "Connector_Coaxial:SMA_Amphenol_132134_Vertical")
     )
     (path "/78f71895-bddb-4f64-a608-99074f2d1c44/139c9d95-fce8-4012-aeed-de926a08d12b/d6d2e8de-86d5-4d4b-9b81-58f3ef67d70a"
       (reference "AE2") (unit 1) (value "Antenna_Shield") (footprint "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical")
     )
     (path "/78f71895-bddb-4f64-a608-99074f2d1c44/139c9d95-fce8-4012-aeed-de926a08d12b/1180a2df-e50d-41e0-a883-67ec0c531d0c"
       (reference "BT2") (unit 1) (value "MS621FE-FL11E") (footprint "Footprints:BAT_MS621FE-FL11E")
+    )
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/4eaf0e66-fe8d-4570-b9be-c3411298844b"
+      (reference "C1") (unit 1) (value "2.2u") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/db715d18-8a26-4ee0-a4a7-9791e14a77aa"
+      (reference "C2") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/a5fd2afc-2258-497a-beea-7ee5a73d8123"
+      (reference "C3") (unit 1) (value "10n") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/d5717a86-3519-4cb4-9382-ca76ec45b02c"
+      (reference "C4") (unit 1) (value "2.2u") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/faa5ad62-364c-48a5-aee7-0f2be359f3b0"
       (reference "C6") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
@@ -1728,8 +1746,11 @@
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/c906ad3d-034c-41fb-8e0d-9dad49a30360"
       (reference "D14") (unit 1) (value "DSK34") (footprint "Diode_SMD:D_SOD-123")
     )
-    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/ca5a19ec-7320-42e8-8209-79e2b4556fc4"
-      (reference "FB2") (unit 1) (value "FerriteBead_Small") (footprint "Inductor_SMD:L_0603_1608Metric")
+    (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/52ebe9f6-c749-40e1-9a58-8a8790f95164"
+      (reference "FB1") (unit 1) (value "BLM18PG221SN1D") (footprint "Inductor_SMD:L_0603_1608Metric")
+    )
+    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/db8aa9b9-0983-4205-8c84-f758ddc2ac19"
+      (reference "FB2") (unit 1) (value "BLM18PG221SN1D") (footprint "Inductor_SMD:L_0603_1608Metric")
     )
     (path "/78f71895-bddb-4f64-a608-99074f2d1c44/139c9d95-fce8-4012-aeed-de926a08d12b/7fc388b4-a1da-400c-9e84-c4c8ec42cf7d"
       (reference "FB3") (unit 1) (value "HZ1005K182TFB03") (footprint "Resistor_SMD:R_0402_1005Metric")
@@ -1745,6 +1766,12 @@
     )
     (path "/b0c1f62a-b351-48b8-ac88-59c1c4ffa2ff"
       (reference "H4") (unit 1) (value "MountingHole") (footprint "MountingHole:MountingHole_2.5mm_Pad")
+    )
+    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/620b228e-0ce7-49ae-8a03-f7e6e9d55d47/dcaabe36-5c7c-4632-887d-bc6cbf2df42b"
+      (reference "I1") (unit 1) (value "AL5809-30S1-7") (footprint "Diode_SMD:D_SOD-123")
+    )
+    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/8cb728ef-7455-4a15-8c69-f1099dedd937/dcaabe36-5c7c-4632-887d-bc6cbf2df42b"
+      (reference "I2") (unit 1) (value "AL5809-30S1-7") (footprint "Diode_SMD:D_SOD-123")
     )
     (path "/e94c6cea-6c6c-4b5f-a840-b97a15d9406a/638541eb-47ee-4c42-a237-1bfd4b3757bf"
       (reference "IC1") (unit 1) (value "XTSD04GLGEAG") (footprint "SON127P800X600X95-8N")
@@ -1774,13 +1801,13 @@
       (reference "JP1") (unit 1) (value "UART_Switch") (footprint "Footprints:UART_Switch")
     )
     (path "/78f71895-bddb-4f64-a608-99074f2d1c44/139c9d95-fce8-4012-aeed-de926a08d12b/a8ae94a3-0356-478e-bd1e-7ba508733e3f"
-      (reference "JP?") (unit 1) (value "UART_Switch") (footprint "Footprints:UART_Switch")
+      (reference "JP2") (unit 1) (value "UART_Switch") (footprint "Footprints:UART_Switch")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/5ad74e0e-a10d-4a13-a43a-470a8db42dba"
-      (reference "L2") (unit 1) (value "6u") (footprint "https:__datasheet.lcsc.com_lcsc_2105092345_BOURNS-SRP5030T-6R8M_C1329837.pdf")
+      (reference "L2") (unit 1) (value "6u") (footprint "Inductor_SMD:L_Bourns_SRP5030T")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/1be90e24-a5a2-438a-8ea7-4aebdf97be80"
-      (reference "MOSFET1") (unit 1) (value "DMG6968UDM-7") (footprint "footprints:DMG6968UDM-7")
+      (reference "MOSFET1") (unit 1) (value "DMG6968UDM-7") (footprint "Footprints:DMG6968UDM-7")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/ae83284f-7ae7-48cb-80b6-3e27691cb0cd"
       (reference "Q1") (unit 1) (value "??") (footprint "Package_TO_SOT_SMD:SOT-23")
@@ -1872,9 +1899,6 @@
     (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/6c6b510e-a646-4fde-adbd-cb7dd9bdaf17"
       (reference "R25") (unit 1) (value "10k") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
-    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/620b228e-0ce7-49ae-8a03-f7e6e9d55d47/ca3c6b19-8ae3-4c09-8685-c83f79657403"
-      (reference "R26") (unit 1) (value "64.9R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
     (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/620b228e-0ce7-49ae-8a03-f7e6e9d55d47/fbaf4877-de86-47c1-a8aa-06938d6fd750"
       (reference "R27") (unit 1) (value "2R") (footprint "Resistor_SMD:R_2512_6332Metric")
     )
@@ -1916,9 +1940,6 @@
     )
     (path "/78f71895-bddb-4f64-a608-99074f2d1c44/256d0f41-abcb-432e-a4cc-bcef1aa15bc3/6b606fff-6c4e-4c42-ab47-1bf7eb774a0f"
       (reference "R40") (unit 1) (value "0R") (footprint "Resistor_SMD:R_0603_1608Metric")
-    )
-    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/8cb728ef-7455-4a15-8c69-f1099dedd937/ca3c6b19-8ae3-4c09-8685-c83f79657403"
-      (reference "R46") (unit 1) (value "64.9R") (footprint "Resistor_SMD:R_0603_1608Metric")
     )
     (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/8cb728ef-7455-4a15-8c69-f1099dedd937/fbaf4877-de86-47c1-a8aa-06938d6fd750"
       (reference "R47") (unit 1) (value "2R") (footprint "Resistor_SMD:R_2512_6332Metric")
@@ -2010,9 +2031,6 @@
     (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/993ff105-4d18-4c9e-91c5-e8c562468585"
       (reference "U5") (unit 1) (value "STM32F405RGTx") (footprint "Package_QFP:LQFP-64_10x10mm_P0.5mm")
     )
-    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/620b228e-0ce7-49ae-8a03-f7e6e9d55d47/c79e3d55-991e-4d40-8983-b5b460c5645b"
-      (reference "U6") (unit 1) (value "LM334M") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
-    )
     (path "/f1926e02-3170-4727-853e-1c4f3bbf137d/387a6227-b331-470e-ab79-9947b9ac881d"
       (reference "U7") (unit 1) (value "USBLC6-2SC6") (footprint "Package_TO_SOT_SMD:SOT-23-6")
     )
@@ -2029,10 +2047,7 @@
       (reference "U11") (unit 1) (value "BMX055") (footprint "Footprints:BMX055")
     )
     (path "/78f71895-bddb-4f64-a608-99074f2d1c44/9f95701d-2876-4223-990f-d706d5845c81/97117627-dc94-4329-9d42-896e084c9c72"
-      (reference "U12") (unit 1) (value "MS561101BA03-50") (footprint "SON8_MS5611_TEC")
-    )
-    (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/8cb728ef-7455-4a15-8c69-f1099dedd937/c79e3d55-991e-4d40-8983-b5b460c5645b"
-      (reference "U14") (unit 1) (value "LM334M") (footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
+      (reference "U12") (unit 1) (value "MS561101BA03-50") (footprint "Footprints:MS561101BA03-50")
     )
     (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/8cb728ef-7455-4a15-8c69-f1099dedd937/3b2231ac-5c6b-4436-8bee-121e6f356637"
       (reference "U15") (unit 1) (value "LM321") (footprint "Package_TO_SOT_SMD:SOT-23-5")
