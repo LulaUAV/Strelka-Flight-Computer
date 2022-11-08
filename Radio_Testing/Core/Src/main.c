@@ -51,7 +51,7 @@ DMA_HandleTypeDef hdma_usart1_rx;
 /* USER CODE BEGIN PV */
 UART_HandleTypeDef* USB_UART = &huart1;
 SPI_HandleTypeDef* RF_SPI = &hspi1;
-MAX_RF_PACKET_SIZE = 256;
+#define MAX_RF_PACKET_SIZE 256
 uint8_t RF_RX_Buff[MAX_RF_PACKET_SIZE];
 /* USER CODE END PV */
 
