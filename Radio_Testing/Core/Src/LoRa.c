@@ -100,7 +100,8 @@ void LoRa_setModulation(LoRa* _LoRa, int mode) {
 
 	// Toggle first RegOpMode bit
 	if(mode == 2) {	// LoRa
-		LoRa_write(_LoRa, RegOpMode, (read & 0x7F) | 0x80);
+		LoRa_write(_LoRa, RegOpMode, 0x41);
+//		LoRa_write(_LoRa, RegOpMode, (read & 0x7F) | 0x80);
 		_LoRa->modulationMode = LORA_MODULATION;
 	}
 	else if (mode == 1) {	// OOK

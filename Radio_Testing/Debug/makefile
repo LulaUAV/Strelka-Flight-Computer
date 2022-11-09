@@ -64,8 +64,8 @@ all: main-build
 main-build: Radio_Testing.elf secondary-outputs
 
 # Tool invocations
-Radio_Testing.elf Radio_Testing.map: $(OBJS) $(USER_OBJS) C:\Users\thean\Documents\FYP\Strelka-Flight-Computer\Radio_Testing\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Radio_Testing.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\thean\Documents\FYP\Strelka-Flight-Computer\Radio_Testing\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Radio_Testing.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Radio_Testing.elf Radio_Testing.map: $(OBJS) $(USER_OBJS) C:\Users\thean\OneDrive\Documents\1.\ Uni\ Work\HPR\Strelka-Flight-Computer\Radio_Testing\STM32F405RGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Radio_Testing.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\thean\OneDrive\Documents\1. Uni Work\HPR\Strelka-Flight-Computer\Radio_Testing\STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Radio_Testing.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -1,5 +1,5 @@
 Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o: \
- C:/Users/thean/Documents/FYP/Strelka-Flight-Computer/SPI_Comms_Test/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
+ C:/Users/thean/OneDrive/Documents/1.\ Uni\ Work/HPR/Strelka-Flight-Computer/SPI_Comms_Test/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h \
  ../../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h745xx.h \
  ../../Drivers/CMSIS/Include/core_cm7.h \

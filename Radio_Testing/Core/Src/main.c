@@ -51,8 +51,9 @@ DMA_HandleTypeDef hdma_usart1_rx;
 /* USER CODE BEGIN PV */
 UART_HandleTypeDef* USB_UART = &huart1;
 SPI_HandleTypeDef* RF_SPI = &hspi1;
-#define MAX_RF_PACKET_SIZE 256
+#define MAX_RF_PACKET_SIZE 20
 uint8_t RF_RX_Buff[MAX_RF_PACKET_SIZE];
+#define DEBUG
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -71,6 +72,12 @@ static void MX_TIM2_Init(void);
 /* USER CODE BEGIN 0 */
 LoRa LoRaClass;
 uint8_t RF_available_bytes = 0;
+
+void debug_print(char* packet, size_t length) {
+	#ifdef DEBUG
+	CDC_Transmit_HS(packet, length);
+	#endif
+}
 
 void Blocking_LED_Blink(uint8_t freq) {
 	while(1) {
@@ -141,12 +148,12 @@ int main(void)
   LoRaClass.crcRate				  = CR_4_5;						// default = CR_4_5
   LoRaClass.power			      = POWER_20db;					// default = 20db
   LoRaClass.overCurrentProtection = 120; 						// default = 100 mA
-  LoRaClass.preamble			  = 10;		  					// default = 8;
-  LoRaClass.preamble			  = LORA_MODULATION;
+  LoRaClass.preamble			  = 8;		  					// default = 8;
 
-  HAL_GPIO_WritePin(RF_SPI_NSS_GPIO_Port, RF_SPI_NSS_Pin, GPIO_PIN_SET);
+//  HAL_GPIO_WritePin(RF_SPI_NSS_GPIO_Port, RF_SPI_NSS_Pin, GPIO_PIN_SET);
 
   LoRa_reset(&LoRaClass);
+  LoRa_setModulation(&LoRaClass, LORA_MODULATION);
   uint32_t result = LoRa_init(&LoRaClass);
 
   if(result == LORA_NOT_FOUND) {
@@ -155,21 +162,36 @@ int main(void)
   else if(result == LORA_UNAVAILABLE) {
 	  Blocking_LED_Blink(1);
   }
+
   // START CONTINUOUS RECEIVING -----------------------------------
   LoRa_startReceiving(&LoRaClass);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  if(RF_available_bytes) {
+		  // Bytes in buffer
+		  LoRa_receive(&LoRaClass, RF_RX_Buff, RF_available_bytes);
+		  RF_available_bytes = 0;
+
+		  // Extract header
+		  uint8_t header = RF_RX_Buff[0];
+		  switch(header) {
+		  case 0x01:
+			  debug_print("Received packet type 1\r\n", sizeof("Received packet type 1\r\n"));
+			  break;
+		  case 0x02:
+
+			  break;
+		  }
+	  }
+	  char send_buff[] = "hello world\r\n";
+	  LoRa_transmit(&LoRaClass, send_buff, sizeof(send_buff), 1000);
+
     /* USER CODE END WHILE */
 
-	if(RF_available_bytes) {
-		// Read from RF buffer
-		LoRa_receive(&LoRaClass, RF_RX_Buff, RF_available_bytes);
-	}
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
