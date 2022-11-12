@@ -543,7 +543,7 @@
     (property "Datasheet" "https://datasheet.lcsc.com/lcsc/1811071031_Bosch-Sensortec-BMX055_C94022.pdf" (id 3) (at 150.622 93.472 0)
       (effects (font (size 1.27 1.27)) (justify left bottom) hide)
     )
-    (property "LCSC#" "" (id 4) (at 150.622 93.472 0)
+    (property "LCSC#" "C94022" (id 4) (at 150.622 93.472 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid b60405ea-e732-4014-8753-26bd0c1b2952))

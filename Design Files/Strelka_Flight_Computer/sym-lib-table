@@ -20,4 +20,5 @@
   (lib (name "TPS54331D")(type "KiCad")(uri "C:/Users/thean/Documents/FYP/Strelka-Flight-Computer/Local Library/TPS54331D.kicad_sym")(options "")(descr ""))
   (lib (name "TPS61085DGKR")(type "KiCad")(uri "C:/Users/thean/Documents/FYP/Strelka-Flight-Computer/Local Library/TPS61085DGKR.kicad_sym")(options "")(descr ""))
   (lib (name "UART_Switch")(type "KiCad")(uri "C:/Users/thean/Documents/FYP/Strelka-Flight-Computer/Local Library/UART_Switch.kicad_sym")(options "")(descr ""))
+  (lib (name "SM04B-GHS-TB_LF__SN_-")(type "Legacy")(uri "C:/Users/thean/Documents/FYP/Strelka-Flight-Computer/Local Library/SM04B-GHS-TB_LF__SN_-.lib")(options "")(descr ""))
 )

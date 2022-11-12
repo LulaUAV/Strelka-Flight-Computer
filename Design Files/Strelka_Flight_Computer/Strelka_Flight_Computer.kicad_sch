@@ -1266,6 +1266,9 @@
     (path "/7e469a82-52a7-4eb1-be03-bc9c0642b27e/f6bbf021-792b-4238-a079-3ac51234fc81"
       (reference "#PWR0111") (unit 1) (value "GND") (footprint "")
     )
+    (path "/f1926e02-3170-4727-853e-1c4f3bbf137d/6318dec5-1f51-4e8d-a089-d643419b3917"
+      (reference "#PWR0112") (unit 1) (value "GND") (footprint "")
+    )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/52eb8424-8323-451c-a723-5be04f92ea20"
       (reference "#PWR0113") (unit 1) (value "+5V") (footprint "")
     )
@@ -1702,13 +1705,13 @@
       (reference "C54") (unit 1) (value "NC") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/cd9d969a-90e2-4b7e-9ebf-a026582f1f4a"
-      (reference "C55") (unit 1) (value "68u") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C55") (unit 1) (value "47u") (footprint "Capacitor_SMD:C_0603_1608Metric")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/9a1a23bb-83f8-4254-b551-bc4a36c5f07c"
-      (reference "C56") (unit 1) (value "NC") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C56") (unit 1) (value "47u") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/67b1f40c-47eb-466b-96ea-02f8f42019d6"
-      (reference "C57") (unit 1) (value "NC") (footprint "Capacitor_SMD:C_0603_1608Metric")
+      (reference "C57") (unit 1) (value "NC") (footprint "Capacitor_SMD:C_0805_2012Metric")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/6fc39a66-9662-4102-b885-e74616839c06"
       (reference "D1") (unit 1) (value "B5819W") (footprint "Diode_SMD:D_SOD-123")
@@ -1782,8 +1785,8 @@
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/7aae60fb-0e8e-4d6d-a5d6-5094aac4b7de"
       (reference "J1") (unit 1) (value "1S_LiPo_LARGE_HOLE_XT-30") (footprint "Connector_AMASS:AMASS_XT30PW-M_1x02_P2.50mm_Horizontal")
     )
-    (path "/f1926e02-3170-4727-853e-1c4f3bbf137d/71fab830-8ad4-461f-bcc9-57af90078950"
-      (reference "J2") (unit 1) (value "Conn_01x04") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Horizontal")
+    (path "/f1926e02-3170-4727-853e-1c4f3bbf137d/aa4e3ae8-5d39-44b4-9106-2459fac13c5b"
+      (reference "J2") (unit 1) (value "SM04B-GHS-TB(LF)(SN)-") (footprint "Footprints:JST_SM04B-GHS-TB(LF)(SN)-")
     )
     (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/cdc8e8f4-13f6-4fd7-8134-b4eac06fe0b2"
       (reference "J3") (unit 1) (value "DB125-3.5-4P-GN-S") (footprint "TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x04_P3.50mm_Horizontal")
@@ -1810,10 +1813,10 @@
       (reference "MOSFET1") (unit 1) (value "DMG6968UDM-7") (footprint "Footprints:DMG6968UDM-7")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/ae83284f-7ae7-48cb-80b6-3e27691cb0cd"
-      (reference "Q1") (unit 1) (value "??") (footprint "Package_TO_SOT_SMD:SOT-23")
+      (reference "Q1") (unit 1) (value "CJK2333") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
-    (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/319929fc-5a36-48a8-bfc0-64ea3cc37883"
-      (reference "Q2") (unit 1) (value "??") (footprint "Package_TO_SOT_SMD:SOT-23")
+    (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/358e3977-4b9e-4375-802a-3e39e37f1b59"
+      (reference "Q2") (unit 1) (value "CJK2333") (footprint "Package_TO_SOT_SMD:SOT-23")
     )
     (path "/35cf6da3-4352-42df-b1af-73b09ff2e1d9/620b228e-0ce7-49ae-8a03-f7e6e9d55d47/0f5969cf-c5c1-45fb-b204-a7b784f9d774"
       (reference "Q3") (unit 1) (value "AO3401A") (footprint "Package_TO_SOT_SMD:SOT-23")
@@ -2017,7 +2020,7 @@
       (reference "SW2") (unit 1) (value "SW_Push") (footprint "Button_Switch_SMD:SW_Push_1P1T_NO_CK_KSC6xxJ")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/3198fbd0-6976-4536-a1e5-d36ee94ebf47"
-      (reference "SW3") (unit 1) (value "SW_DIP_x01") (footprint "Footprints:SM02BGHSTBLFSN")
+      (reference "SW3") (unit 1) (value "SM02B-GHS-TB(LF)(SN)") (footprint "Footprints:SM02BGHSTBLFSN")
     )
     (path "/0daddb18-1491-4767-9ffd-66c8a8ce3cbd/be9dfd82-91cf-41b8-963c-489302ad990b"
       (reference "U2") (unit 1) (value "AP9101CK6") (footprint "Package_TO_SOT_SMD:SOT-23-6")
