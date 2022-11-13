@@ -274,7 +274,6 @@
     )
   )
 
-
   (junction (at 62.23 76.2) (diameter 0) (color 0 0 0 0)
     (uuid 19055f1d-da37-42f8-9452-bdd029911fa2)
   )
@@ -618,7 +617,7 @@
     (pin "1" (uuid fd9ffa82-d3f0-412e-b034-abdcc9e5f5de))
   )
 
-  (symbol (lib_id "XTSD04GLGEAG:XTSD04GLGEAG") (at 45.085 50.8 0) (unit 1)
+  (symbol (lib_id "XTSD04GLGEAG:XTSD04GLGEAG") (at 45.085 50.8 0)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid efea2a9a-0a7a-49b7-966d-fa8d01902c17)
     (property "Reference" "IC1" (id 0) (at 71.12 35.179 0))

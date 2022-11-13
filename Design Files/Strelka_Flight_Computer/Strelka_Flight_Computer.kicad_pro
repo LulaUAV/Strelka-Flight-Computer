@@ -55,7 +55,34 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "clearance|127791400|96898200|5f30f18a-2eb5-4274-9d3d-af9601238118|2e74c5cf-df21-4ecb-90c2-e2781152c95b",
+        "clearance|127791400|97548200|a682d36d-28f3-4c0f-8f71-912aa876dffd|5f30f18a-2eb5-4274-9d3d-af9601238118",
+        "clearance|127791400|98198200|8a26463c-6132-4640-81bb-e4ad34aa7d3c|a682d36d-28f3-4c0f-8f71-912aa876dffd",
+        "clearance|132091400|96670600|91d720eb-a86c-46fd-9f6a-0dddf20bde1e|291d9785-819b-4ab3-8871-6887bb427f84",
+        "clearance|132091400|97970600|744bf9ad-3201-4631-b4df-82ae02271ec9|72596630-6f62-446b-a788-e57836f8a3c1",
+        "courtyards_overlap|101378001|80218601|56fc849c-b296-4403-9bb4-03c6bcf87048|6a30c802-8cc9-40ef-a454-dc69fc466dc3",
+        "courtyards_overlap|102764999|75732399|6a30c802-8cc9-40ef-a454-dc69fc466dc3|9dbd9e26-9782-45c4-9403-4d72b07f29de",
+        "courtyards_overlap|103117201|83902801|77c1988d-bee9-4eab-bbe2-68f624cd08a8|d3ff16ad-199c-4151-b51d-a68d2ef279b4",
+        "courtyards_overlap|106487201|89028801|201d8130-4090-4b9e-92e2-27643553a176|b78043a5-7a02-4945-aa76-579ca8313cb9",
+        "courtyards_overlap|106535701|85472801|201d8130-4090-4b9e-92e2-27643553a176|e65316a3-9c56-496e-85b2-f924401c4d9f",
+        "courtyards_overlap|106535701|85472801|77c1988d-bee9-4eab-bbe2-68f624cd08a8|e65316a3-9c56-496e-85b2-f924401c4d9f",
+        "courtyards_overlap|114001999|96482711|9b4f46fe-6874-4ed6-8941-5b832417f422|e69e58e8-a6b9-465f-ac96-56108c089b42",
+        "courtyards_overlap|119489999|80044999|12b351f9-6591-4abc-b4c0-05a9ef03306e|9d0ff84c-655a-47d5-bae8-4ebccf128b98",
+        "courtyards_overlap|126155199|99184399|05d6ccc2-421b-4e9d-91cd-1ea66144224c|403f035e-89c7-4267-bc39-540407f9432f",
+        "courtyards_overlap|163679999|82550001|5ee5e97f-36b9-4e1b-956a-6896ec8bd8c5|a1dc82c7-483b-405f-bfaa-f81bfff53176",
+        "courtyards_overlap|164550001|84100001|07cdb18d-e75f-488a-aee4-bc0da0dfdcf1|f2c9eedc-93d5-47cc-a71e-205b4a345d37",
+        "courtyards_overlap|164550001|84100001|5ee5e97f-36b9-4e1b-956a-6896ec8bd8c5|f2c9eedc-93d5-47cc-a71e-205b4a345d37",
+        "courtyards_overlap|164550001|84100001|f2c9eedc-93d5-47cc-a71e-205b4a345d37|07cdb18d-e75f-488a-aee4-bc0da0dfdcf1",
+        "courtyards_overlap|164999999|84100001|07cdb18d-e75f-488a-aee4-bc0da0dfdcf1|5ee5e97f-36b9-4e1b-956a-6896ec8bd8c5",
+        "courtyards_overlap|164999999|84100001|5ee5e97f-36b9-4e1b-956a-6896ec8bd8c5|07cdb18d-e75f-488a-aee4-bc0da0dfdcf1",
+        "courtyards_overlap|177769999|77210001|17ccf778-148c-4376-973c-201f1208d0c7|293534a1-9613-4dcd-a048-ce9a885cba35",
+        "courtyards_overlap|178560000|75269999|55abb9fe-9cbe-43e6-ace1-61fdae65126e|8413a19c-db42-4d5e-9e67-ed486f50f1d2",
+        "courtyards_overlap|98870001|85452001|201d8130-4090-4b9e-92e2-27643553a176|77c1988d-bee9-4eab-bbe2-68f624cd08a8",
+        "invalid_outline|96200000|73200504|c67cf94f-d750-45b8-b736-ef5a3f3d0d84|00000000-0000-0000-0000-000000000000",
+        "invalid_outline|96200005|73189405|813a2c99-2e06-4e79-9a0c-105f854274d0|00000000-0000-0000-0000-000000000000",
+        "malformed_courtyard|123301801|82884433|ab9fec47-d67b-4248-b9a3-254363b92c96|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -85,8 +112,8 @@
         "padstack": "error",
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
-        "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_over_copper": "ignore",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -470,7 +497,6 @@
           "/STM32F405/USART2_TX",
           "/STM32F405/USB2_IN+",
           "/STM32F405/USB2_IN-",
-          "/Sensors/GPS_RST",
           "/Sensors/INT_1_MAG",
           "/Sensors/INT_2_ACCEL",
           "/Sensors/INT_2_GYRO",
@@ -645,10 +671,6 @@
     [
       "e94c6cea-6c6c-4b5f-a840-b97a15d9406a",
       "Data_Logging"
-    ],
-    [
-      "b349d17f-16af-45b5-b34b-b6e3104521b0",
-      "Status_Output"
     ],
     [
       "256d0f41-abcb-432e-a4cc-bcef1aa15bc3",
