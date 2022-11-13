@@ -5,7 +5,6 @@
 void setup() {
   Serial.begin(9600);
   while (!Serial);
-  Serial.write(0x44);             // Byte to say ground station is starting
   while (!LoRa.begin(915E6)) {
     Serial.write(0xFA);
   }
@@ -25,8 +24,15 @@ void loop() {
 
   if (Serial.available() > 0) {
     byte readByte = Serial.read();
-    LoRa.beginPacket();
-    LoRa.write(readByte);
-    LoRa.endPacket(false);
+    if(readByte == 0x66) {
+      // ACK received from ground station computer
+      // Respond with ACK
+      Serial.write(0x66);
     }
+    else {
+      LoRa.beginPacket();
+      LoRa.write(readByte);
+      LoRa.endPacket(false);
+    }
+  }
 }
