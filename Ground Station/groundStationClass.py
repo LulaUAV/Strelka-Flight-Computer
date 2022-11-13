@@ -13,13 +13,13 @@ class groundStation:
     def connect(self):
         # Connects to ground station receiver device
         ## **** Set this port to suit the serial port of the receiver device **** ##
-        self.COMPort = "COM4"
+        self.COMPort = "COM11"
         self.serialPort = serial.Serial(port = self.COMPort, baudrate=9600, bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
         time.sleep(2)
         # Send ACK packet
-        self.serialPort.write(b'f')
-        read_byte = self.serialPort.read()
-        return  read_byte == b'\x66'
+        # self.serialPort.write(b'f')
+        # read_byte = self.serialPort.read()
+        # return  read_byte == b'\x66'
             
     def create_log_dir(self):
         if not os.path.exists("FlightData"):
@@ -41,6 +41,7 @@ class groundStation:
         self.logFile.write(writeString)
     
     def calculate_crc32(self, received_bytes):
+        # zlib uses 0x4C11DB7 polynomial
         return zlib.crc32(received_bytes[0:-4])
 
     def compare_crc32(self, received_bytes):
@@ -49,7 +50,12 @@ class groundStation:
         return calc_CRC == rec_CRC
         
     def test_gimbal(self):
-        self.serialPort.write(int(1))
+        packet = bytearray()
+        packet.append(1)
+        crc = zlib.crc32(packet)
+        crc = crc.to_bytes(4, byteorder = 'big')
+        packet.extend(crc)
+        self.serialPort.write(packet)
         result = self.serialPort.read(6)
         if(self.compare_crc32(result)):
             # Valid packet

@@ -40,6 +40,8 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+CRC_HandleTypeDef hcrc;
+
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim2;
@@ -64,6 +66,7 @@ static void MX_USART2_UART_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_DMA_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_CRC_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -90,7 +93,7 @@ void Blocking_LED_Blink(uint8_t freq) {
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin){
 	if(GPIO_Pin == LoRaClass.DIO0_pin){
-		RF_available_bytes = LoRa_received_bytes(&LoRaClass);
+		RF_available_bytes = LoRa_read(&LoRaClass, RegRxNbBytes);
 	}
 }
 
@@ -130,7 +133,13 @@ int main(void)
   MX_DMA_Init();
   MX_TIM2_Init();
   MX_USB_DEVICE_Init();
+  MX_CRC_Init();
   /* USER CODE BEGIN 2 */
+  MX_CRC_Init();
+  hcrc.Instance = CRC;
+//  hcrc.Init.GeneratingPolynomial = 0x4C11DB7;
+  // https://stackoverflow.com/questions/28064278/matching-crc32-from-stm32f0-and-zlib
+  HAL_CRC_Init(&hcrc);
 
   // LoRa Class definitions
   LoRaClass = newLoRa();
@@ -153,7 +162,7 @@ int main(void)
 //  HAL_GPIO_WritePin(RF_SPI_NSS_GPIO_Port, RF_SPI_NSS_Pin, GPIO_PIN_SET);
 
   LoRa_reset(&LoRaClass);
-  LoRa_setModulation(&LoRaClass, LORA_MODULATION);
+//  LoRa_setModulation(&LoRaClass, LORA_MODULATION);
   uint32_t result = LoRa_init(&LoRaClass);
 
   if(result == LORA_NOT_FOUND) {
@@ -174,21 +183,32 @@ int main(void)
 	  if(RF_available_bytes) {
 		  // Bytes in buffer
 		  LoRa_receive(&LoRaClass, RF_RX_Buff, RF_available_bytes);
-		  RF_available_bytes = 0;
 
-		  // Extract header
-		  uint8_t header = RF_RX_Buff[0];
-		  switch(header) {
-		  case 0x01:
-			  debug_print("Received packet type 1\r\n", sizeof("Received packet type 1\r\n"));
-			  break;
-		  case 0x02:
-
-			  break;
+		  // Calculate CRC32
+		  uint32_t CRC_Rec;
+		  uint32_t CRC_Calc;
+		  if (RF_available_bytes > 4) {
+			  // This statement prevents hard faults from noise causing packets to fire
+			  memcpy(&CRC_Rec, &RF_RX_Buff[RF_available_bytes-4], sizeof(uint32_t));
+			  CRC_Calc = ~HAL_CRC_Calculate(&hcrc,(uint32_t *) RF_RX_Buff, RF_available_bytes-4);
 		  }
+		  if(CRC_Calc == CRC_Rec){
+			  // Extract header
+			  uint8_t header = RF_RX_Buff[0];
+			  switch(header) {
+			  case 0x01:
+				  debug_print("Received test gimbal request\r\n", sizeof("Received test gimbal request\r\n"));
+				  break;
+			  case 0x02:
+				  debug_print("Received continuity request\r\n", sizeof("Received continuity request\r\n"));
+				  break;
+			  }
+		  }
+		  RF_available_bytes = 0;
 	  }
-	  char send_buff[] = "hello world\r\n";
-	  LoRa_transmit(&LoRaClass, send_buff, sizeof(send_buff), 1000);
+//	  char send_buff[14] = "hello world\r\n";
+//	  LoRa_transmit(&LoRaClass, send_buff, sizeof(send_buff), 1000);
+//	  HAL_Delay(1000);
 
     /* USER CODE END WHILE */
 
@@ -240,6 +260,32 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief CRC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CRC_Init(void)
+{
+
+  /* USER CODE BEGIN CRC_Init 0 */
+
+  /* USER CODE END CRC_Init 0 */
+
+  /* USER CODE BEGIN CRC_Init 1 */
+
+  /* USER CODE END CRC_Init 1 */
+  hcrc.Instance = CRC;
+  if (HAL_CRC_Init(&hcrc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CRC_Init 2 */
+
+  /* USER CODE END CRC_Init 2 */
+
 }
 
 /**

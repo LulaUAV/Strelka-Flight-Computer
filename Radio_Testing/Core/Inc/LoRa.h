@@ -14,19 +14,9 @@
 //--------- MODES ---------//
 #define SLEEP_MODE				0
 #define	STNBY_MODE				1
-#define FS_MODE_TX				2
 #define TRANSMIT_MODE			3
-#define FS_MODE_RX				4
 #define RXCONTIN_MODE			5
 #define RXSINGLE_MODE			6
-#define LORA_MODULATION			2
-#define OOK_MODULATION			1
-#define FSK_MODULATION			0
-#define CONTINUOUS_MODE			0
-#define PACKET_MODE				1
-
-//--------HARDWARE PARAMS--------//
-#define RFM95_CRYSTAL_FREQ		32.0
 
 //------- BANDWIDTH -------//
 #define BW_7_8KHz					0
@@ -63,8 +53,6 @@
 //------- REGISTERS -------//
 #define RegFiFo								0x00
 #define RegOpMode							0x01
-#define RegBitrateMsb						0x02
-#define RegBitrateLsb						0x03
 #define RegFrMsb							0x06
 #define RegFrMid							0x07
 #define RegFrLsb							0x08
@@ -80,23 +68,10 @@
 #define RegPktRssiValue				0x1A
 #define	RegModemConfig1				0x1D
 #define RegModemConfig2				0x1E
-#define RegPacketConfig1			0x30
-#define RegPacketConfig2			0x31
 #define RegSymbTimeoutL				0x1F
-#define RegPreambleDetect			0x1F
 #define RegPreambleMsb				0x20
 #define RegPreambleLsb				0x21
-#define RegPayloadLength			0x32
-#define RegSyncConfig				0x27
-#define RegSyncValue1				0x28
-#define RegSyncValue2				0x29
-#define RegSyncValue3				0x2a
-#define RegSyncValue4				0x2b
-#define RegSyncValue5				0x2c
-#define RegSyncValue6				0x2d
-#define RegSyncValue7				0x2e
-#define RegSyncValue8				0x2f
-#define RegFifoThresh				0x35
+#define RegPayloadLength			0x22
 #define RegDioMapping1				0x40
 #define RegDioMapping2				0x41
 #define RegVersion						0x42
@@ -127,7 +102,6 @@ typedef struct LoRa_setting{
 	uint16_t		preamble;
 	uint8_t			power;
 	uint8_t			overCurrentProtection;
-	uint8_t 		modulationMode;
 
 } LoRa;
 
@@ -136,7 +110,6 @@ void LoRa_reset(LoRa* _LoRa);
 void LoRa_readReg(LoRa* _LoRa, uint8_t* address, uint16_t r_length, uint8_t* output, uint16_t w_length);
 void LoRa_writeReg(LoRa* _LoRa, uint8_t* address, uint16_t r_length, uint8_t* values, uint16_t w_length);
 void LoRa_gotoMode(LoRa* _LoRa, int mode);
-void LoRa_setModulation(LoRa* _LoRa, int mode);
 uint8_t LoRa_read(LoRa* _LoRa, uint8_t address);
 void LoRa_write(LoRa* _LoRa, uint8_t address, uint8_t value);
 void LoRa_BurstWrite(LoRa* _LoRa, uint8_t address, uint8_t *value, uint8_t length);
@@ -146,16 +119,11 @@ void LoRa_setFrequency(LoRa* _LoRa, int freq);
 void LoRa_setSpreadingFactor(LoRa* _LoRa, int SP);
 void LoRa_setPower(LoRa* _LoRa, uint8_t power);
 void LoRa_setOCP(LoRa* _LoRa, uint8_t current);
-void LoRa_setCRCon(LoRa* _LoRa);
 void LoRa_setTOMsb_setCRCon(LoRa* _LoRa);
-void LoRa_setBitrate(LoRa* _LoRa, uint16_t bitRate);
-void LoRa_setSyncWord(LoRa* _LoRa, uint8_t* syncWord, size_t len);
 uint8_t LoRa_transmit(LoRa* _LoRa, uint8_t* data, uint8_t length, uint16_t timeout);
 void LoRa_startReceiving(LoRa* _LoRa);
-void LoRa_setPayloadLength(LoRa* _LoRa, uint16_t len);
 uint8_t LoRa_receive(LoRa* _LoRa, uint8_t* data, uint8_t length);
 void LoRa_receive_IT(LoRa* _LoRa, uint8_t* data, uint8_t length);
-uint8_t LoRa_received_bytes(LoRa* _LoRa);
 int LoRa_getRSSI(LoRa* _LoRa);
 
 uint16_t LoRa_init(LoRa* _LoRa);

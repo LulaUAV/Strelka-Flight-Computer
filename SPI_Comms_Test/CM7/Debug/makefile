@@ -61,8 +61,8 @@ all: main-build
 main-build: SPI_Comms_Test_CM7.elf secondary-outputs
 
 # Tool invocations
-SPI_Comms_Test_CM7.elf SPI_Comms_Test_CM7.map: $(OBJS) $(USER_OBJS) C:\Users\thean\OneDrive\Documents\1.\ Uni\ Work\HPR\Strelka-Flight-Computer\SPI_Comms_Test\CM7\STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "SPI_Comms_Test_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\thean\OneDrive\Documents\1. Uni Work\HPR\Strelka-Flight-Computer\SPI_Comms_Test\CM7\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Comms_Test_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SPI_Comms_Test_CM7.elf SPI_Comms_Test_CM7.map: $(OBJS) $(USER_OBJS) C:\Users\thean\Documents\FYP\Strelka-Flight-Computer\SPI_Comms_Test\CM7\STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "SPI_Comms_Test_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\thean\Documents\FYP\Strelka-Flight-Computer\SPI_Comms_Test\CM7\STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Comms_Test_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
