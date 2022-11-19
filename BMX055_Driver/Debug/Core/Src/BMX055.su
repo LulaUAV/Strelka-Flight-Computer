@@ -1,0 +1,8 @@
+../Core/Src/BMX055.c:12:6:BMX055_init	16	static
+../Core/Src/BMX055.c:31:6:BMX055_searchDevice	32	static
+../Core/Src/BMX055.c:46:6:BMX055_configuration	32	static
+../Core/Src/BMX055.c:104:7:BMX055_readAccel	48	static
+../Core/Src/BMX055.c:139:6:BMX055_readGyro	48	static
+../Core/Src/BMX055.c:173:6:BMX055_readMag	48	static
+../Core/Src/BMX055.c:213:6:BMX055_writeSPI	24	static
+../Core/Src/BMX055.c:227:6:BMX055_readSPI	32	static
